@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
     <style>
-        #add-money-form{
-            display: none;
-        }
-        #cash-out-form{
-            display: none;
-        }
-        #transfer-form{
+        #add-money-form , #cash-out-form, #transfer-form, #bonus-form, #pay-bill-form , #transaction-form  {
             display: none;
         }
     </style>
@@ -62,29 +56,29 @@
       </div>
 
       <div class="mt-2 grid grid-cols-3 min-h-[200px] gap-4 px-8 pb-8">
-        <div id="add-money" class="text-center rounded-xl border-1 border-gray-200 py-8">
+        <div id="add-money" class="form-btn text-center rounded-xl border-1 border-gray-200 py-8">
           <img class="mx-auto" src="assets/wallet1.png" alt="" />
           <h2 class="mt-2 texl-xl font-bold text-[#08080880]">Add Money</h2>
         </div>
-        <div id="cash-out" class="text-center rounded-xl border-1 border-gray-200 py-8">
+        <div id="cash-out" class="form-btn text-center rounded-xl border-1 border-gray-200 py-8">
           <img class="mx-auto" src="assets/send1.png" alt="" />
           <h2 class="mt-2 texl-xl font-bold text-[#08080880]">Cash Out</h2>
         </div>
-        <div id="transfer" class="text-center rounded-xl border-1 border-gray-200 py-8">
+        <div id="transfer" class="form-btn text-center rounded-xl border-1 border-gray-200 py-8">
           <img class="mx-auto" src="assets/money1.png" alt="" />
           <h2 class="mt-2 texl-xl font-bold text-[#08080880]">
             Transfer Money
           </h2>
         </div>
-        <div class="text-center rounded-xl border-1 border-gray-200 py-8">
+        <div id="get-bonus" class="form-btn text-center rounded-xl border-1 border-gray-200 py-8">
           <img class="mx-auto" src="assets/bonus1.png" alt="" />
           <h2 class="mt-2 texl-xl font-bold text-[#08080880]">Get Bonus</h2>
         </div>
-        <div class="text-center rounded-xl border-1 border-gray-200 py-8">
+        <div id="pay-bill" class="form-btn text-center rounded-xl border-1 border-gray-200 py-8">
           <img class="mx-auto" src="assets/purse1.png" alt="" />
           <h2 class="mt-2 texl-xl font-bold text-[#08080880]">Pay Bill</h2>
         </div>
-        <div class="text-center rounded-xl border-1 border-gray-200 py-8">
+        <div id="transaction" class="form-btn text-center rounded-xl border-1 border-gray-200 py-8">
           <img class="mx-auto" src="assets/transaction1.png" alt="" />
           <h2 class="mt-2 texl-xl font-bold text-[#08080880]">Transaction</h2>
         </div>
@@ -94,9 +88,19 @@
 
 
     <div class="all-forms max-w-lg mx-auto mt-3">
-        <div id="first"></div>
+      <!-- default -->
+      <div id="default" class="form p-5 ">
+        <div class="flex justify-between items-center">
+          <h1 class="text-xl font-semibold my-3">Leatest Transaction</h1>
+          <p class="text-[#08080880]">View All</p>
+        </div>
+        <div  id="leatest-transaction" >
+
+        </div>
+
+      </div>
       <!-- add money -->
-      <div id="add-money-form" class="p-5 ">
+      <div id="add-money-form" class="form p-5 ">
         <h1 class="text-xl font-semibold my-3">Add Money</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div>
@@ -132,7 +136,7 @@
         </form>
       </div>
       <!-- cash out money -->
-      <div id="cash-out-form" class="p-5">
+      <div id="cash-out-form" class="form p-5">
         <h1 class="text-xl font-semibold my-3">Cash Out</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mt-4">
@@ -158,8 +162,8 @@
         <button  id="withdraw-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Withdraw Money</button>
         </form>
       </div>
-      <!-- cash out money -->
-      <div id="transfer-form" class="p-5">
+      <!-- transfer money -->
+      <div id="transfer-form" class="form p-5">
         <h1 class="text-xl font-semibold my-3">Transfer Money</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mt-4">
@@ -185,6 +189,26 @@
         <button  id="send-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Send Now</button>
         </form>
       </div>
+      <!-- get bonus -->
+      <div id="bonus-form" class="form p-5">
+        <h1 class="text-xl font-semibold my-3">Get Bonus</h1>
+      </div>
+      <!-- pay bill -->
+      <div id="pay-bill-form" class="form p-5">
+        <h1 class="text-xl font-semibold my-3">Pay Bill</h1>
+      </div>
+      <!-- transaction -->
+      <div id="transaction-form" class="form p-5">
+        <div class="flex justify-between items-center">
+          <h1 class="text-xl font-semibold my-3">Transactions</h1>
+          <p class="text-[#08080880]">View All</p>
+        </div>
+        <div  id="transaction-container" >
+
+        </div>
+      </div>
+
+      
     </div>
 
     <script src="js/home.js"></script>
